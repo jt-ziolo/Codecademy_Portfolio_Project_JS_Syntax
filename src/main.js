@@ -60,20 +60,24 @@ const toastGenerator = () => {
   return toastFactory(introduction, identify, phrase1, phrase2)
 }
 
-console.log(toastFactory('A', 'B', 'C', 'D'))
-toastFactory('A', 'B', 'C', 'D').makeToast()
-console.log(randomFromArray(introductions))
+toastGenerator().makeToast();
+
+// Tests below
+// -----------
+// console.log(toastFactory('A', 'B', 'C', 'D'))
+// toastFactory('A', 'B', 'C', 'D').makeToast()
+// console.log(randomFromArray(introductions))
 // final two phrases may match
-toastFactory(
-  randomFromArray(introductions),
-  randomFromArray(identifications),
-  randomFromArray(phrases),
-  randomFromArray(phrases)
-).makeToast()
+// toastFactory(
+//   randomFromArray(introductions),
+//   randomFromArray(identifications),
+//   randomFromArray(phrases),
+//   randomFromArray(phrases)
+// ).makeToast()
 // generator ensures final two phrases do not match
-toastGenerator().makeToast()
+// toastGenerator().makeToast()
 // test that the options aren't eliminated by multiple calls to toastGenerator
-toastGenerator().makeToast()
-toastGenerator().makeToast()
-toastGenerator().makeToast()
-toastGenerator().makeToast()
+// toastGenerator().makeToast()
+// toastGenerator().makeToast()
+// toastGenerator().makeToast()
+// toastGenerator().makeToast()
