@@ -38,7 +38,7 @@ const toastFactory = (introduction, identify, phrase1, phrase2) => {
     phrase2,
     makeToast () {
       console.log(
-        `${this.introduction}\n${this.identify} ...\n${this.phrase1}\n${this.phrase2}`
+        `${this.introduction}\n${this.identify} ...\n${this.phrase1},\n${this.phrase2}!`
       )
     }
   }
