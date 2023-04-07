@@ -5,13 +5,19 @@
 // 3. Two encouraging and wishful phrases combined, (e.g. "May they live together happily forever.")
 
 const toastGenerator = (introduction, identify, phrase1, phrase2) => {
-    const toast = {
-        introduction,
-        identify,
-        phrase1,
-        phrase2,
-    };
-    return toast;
+  const toast = {
+    introduction,
+    identify,
+    phrase1,
+    phrase2,
+    toast () {
+      console.log(
+        `${this.introduction}\n${this.identify} ...\n${this.phrase1}\n${this.phrase2}`
+      );
+    }
+  }
+  return toast
 }
 
 console.log(toastGenerator('A', 'B', 'C', 'D'));
+toastGenerator('A', 'B', 'C', 'D').toast();
