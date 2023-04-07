@@ -13,3 +13,5 @@ const toastGenerator = (introduction, identify, phrase1, phrase2) => {
     };
     return toast;
 }
+
+console.log(toastGenerator('A', 'B', 'C', 'D'));
