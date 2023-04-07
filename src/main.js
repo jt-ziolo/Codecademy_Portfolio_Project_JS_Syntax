@@ -4,6 +4,18 @@
 // 2. Identifying the bride and groom in some way (e.g. "To the new Mr. and Mrs.")
 // 3. Two encouraging and wishful phrases combined, (e.g. "May they live together happily forever.")
 
+const introductions = [
+    'Excuse me! May I have your attention?',
+    'Ahem. Check, check. We\'re good? Great. Hey everyone, may I have a few words?',
+    'Hey everyone! Hello? Ah, thank you. I\'d like to make a toast.',
+    'May I have your attention please? Thank you. Let us raise our glasses tonight to celebrate...',
+];
+
+const randomFromArray = (arr) => {
+    const index = Math.floor(Math.random() * arr.length);
+    return arr[index];
+}
+
 const toastFactory = (introduction, identify, phrase1, phrase2) => {
   const toast = {
     introduction,
@@ -21,3 +33,4 @@ const toastFactory = (introduction, identify, phrase1, phrase2) => {
 
 console.log(toastFactory('A', 'B', 'C', 'D'));
 toastFactory('A', 'B', 'C', 'D').makeToast();
+console.log(randomFromArray(introductions));
