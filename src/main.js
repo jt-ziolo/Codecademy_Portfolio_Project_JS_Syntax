@@ -57,8 +57,7 @@ const toastGenerator = () => {
   })
   const phrase2 = randomFromArray(reducedPhrases)
 
-  const toast = toastFactory(introduction, identify, phrase1, phrase2)
-  return toast
+  return toastFactory(introduction, identify, phrase1, phrase2)
 }
 
 console.log(toastFactory('A', 'B', 'C', 'D'))
